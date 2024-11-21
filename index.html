@@ -10,23 +10,51 @@
         .transition-bg {
             transition: background-color 0.3s ease;
         }
+
+        details:not(:open) summary {
+            background-color: #C04120;
+            color: white;
+        }
+
+        details:open summary {
+            background-color: #404D40;
+            color: white;
+        }
     </style>
+
 </head>
 
 <body>
-    <div class="max-w-screen-xl mx-auto px-5 bg-white min-h-screen">
-        <div class="flex flex-col items-center">
-            <h2 class="font-bold text-5xl mt-5 tracking-tight">
-                Participa
-            </h2>
+
+    <div class="relative isolate overflow-hidden bg-gray-900 py-2 sm:py-10 flex items-center">
+        <!-- Background image with overlay for transparency -->
+        <div class="absolute inset-0 z-0 bg-gray-900 opacity-50"></div>
+        <img src="./logo.png" alt="" class="absolute inset-0 z-0 h-full w-full object-cover object-center opacity-50">
+
+        <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full text-center">
+            <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Menú participa</h2>
+            <!-- Legend div with background below the title -->
+            <div class="relative z-10 mx-auto max-w-md px-4 py-2 mt-4 bg-black bg-white bg-opacity-90 text-black rounded-md">
+                <p>Dentro del menú, puedes encontrar una sección dedicada a la participación en eventos y actividades.</p>
+            </div>
         </div>
-        <div class="grid divide-y divide-neutral-200 max-w-4/5 mx-auto mt-4" id="accordion">
+    </div>
+
+
+
+
+
+
+
+    <div class="max-w-screen-xl mx-auto px-5 bg-white min-h-screen">
+
+        <div class="grid divide-y divide-neutral-200 max-xl:grid-cols-1 mx-auto mt-4" id="accordion">
             <!-- Reduje el mt-8 a mt-4 -->
             <div class="py-3">
                 <details class="group">
                     <summary
-                        class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#C04120] text-white group-open:bg-[#404D40]">
-                        <span><a href="./test.html">Descripción</a></span>
+                        class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#404D40] text-white group-open:bg-[#404D40]">
+                        <span>DESCRIPCIÓN</span>
                         <span class="transition-transform group-open:rotate-180">
                             <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
                                 stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"
@@ -35,9 +63,63 @@
                             </svg>
                         </span>
                     </summary>
-                    <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                        SAAS platform is a cloud-based software service that allows users to access and use a variety of
-                        tools and functionality.
+                    <p class="text-neutral-600 mt-3 group-open:animate-fadeIn text-justify mx-5">
+                        <b>Participa</b> es un espacio creado para involucrar a la ciudadanía en las decisiones
+                        gubernamentales
+                        que les afectan.
+
+                        Este espacio, liderado por la administración municipal, garantiza una participación y
+                        control
+                        ciudadano efectivos en
+                        todas las fases de la gestión pública, desde la formulación hasta la evaluación. El
+                        proceso está
+                        regulado por la Ley
+                        1712 de 2014, Ley 1757 de 2015, Decreto 620 de 2020 y, en particular, la Resolución 1519
+                        de
+                        2020.
+
+                        Este menú, siguiendo los lineamientos del Departamento Administrativo de la Función
+                        Pública, se
+                        organiza en seis
+                        secciones:
+                    </p>
+                    <ul class="max-w-md space text-black-500 list-disc list-inside mt-2 mb-2 mx-10">
+
+                        <li>
+                            <b>Diagnostico e identificación de problemas. </b>
+                        </li>
+                        <li>
+                            <b>Planeación y presupuesto participativo. </b>
+                        </li>
+
+                        <li>
+                            <b>Consulta ciudadana.</b>
+                        </li>
+
+                        <li>
+                            <b>Colaboración e innovación. </b>
+                        </li>
+
+                        <li>
+                            <b>Rendición de cuentas. </b>
+                        </li>
+
+
+                        <li>
+                            <b>Control ciudadano. </b>
+                        </li>
+
+                        <li>
+                            <b>Rendición de cuentas. </b>
+                        </li>
+
+
+                    </ul>
+                    <p class="text-neutral-600 mt-3 group-open:animate-fadeIn text-justify mx-5">
+                        Cada sección proporciona mecanismos, canales y herramientas para que los ciudadanos,
+                        usuarios y
+                        grupos de interés
+                        interactúen y se involucren en la gestión pública.
                     </p>
                 </details>
             </div>
@@ -45,7 +127,7 @@
             <div class="py-3">
                 <details class="group" id="main-menu">
                     <summary
-                        class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#C04120] text-white group-open:bg-[#404D40]">
+                        class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#404D40] text-white group-open:bg-[#C04120]">
                         <span>¿MECANISMOS DE PARTICIPACIÓN CIUDADANA?</span>
                         <span class="transition-transform group-open:rotate-180">
                             <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
@@ -55,17 +137,20 @@
                             </svg>
                         </span>
                     </summary>
-                    <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                        SAAS platform is a cloud-based software service that allows users to access and use a variety of
-                        tools and functionality.
+                    <p class="text-neutral-600 mt-3 group-open:animate-fadeIn text-justify">
+                        Los mecanismos de participación “Son herramientas que posee la ciudadanía para dar su opinión y
+                        tomar decisiones relevantes para la construcción de la sociedad”. Esto sin perjuicio de los
+                        mecanismos legales y constitucionales que tienen los
+                        ciudadanos en el ejercicio
+                        de la participación.
                     </p>
 
                     <!-- Submenú dentro del menú principal, inicialmente cerrado -->
-                    <div class="mt-3 max-w-[calc(100%-40px)] ml-8">
+                    <div class="mt-3 max-w-[calc(100%-50px)] ml-8">
                         <details class="group" id="submenu">
                             <summary
-                                class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#C04120] text-white group-open:bg-[#404D40]">
-                                <span>Submenú: Opciones de Participación</span>
+                                class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#404D40] text-white group-open:bg-[#C04120]">
+                                <span>Acción de cumplimiento</span>
                                 <span class="transition-transform group-open:rotate-180">
                                     <svg fill="none" height="24" shape-rendering="geometricPrecision"
                                         stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -74,20 +159,21 @@
                                     </svg>
                                 </span>
                             </summary>
-                            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                                Explore the different ways you can participate in our programs, including surveys,
-                                feedback, and
-                                events.
+                            <p class="text-neutral-900 mt-3 group-open:animate-fadeIn">
+                                Su objetivo es otorgarle a toda persona, natural o jurídica, e incluso a los servidores
+                                públicos, la posibilidad de
+                                acudir ante la autoridad judicial para exigir el cumplimiento del deber que surge de la
+                                ley o del acto administrativo y
+                                que es omitido por la autoridad, o el particular cuando asume esta condición.
                             </p>
                         </details>
                     </div>
 
-
-                    <div class="mt-3 max-w-[calc(100%-40px)] ml-8">
+                    <div class="mt-3 max-w-[calc(100%-50px)] ml-8">
                         <details class="group" id="submenu">
                             <summary
-                                class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#C04120] text-white group-open:bg-[#404D40]">
-                                <span>Submenú: Opciones de Participación</span>
+                                class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#404D40] text-white group-open:bg-[#C04120]">
+                                <span>Acción de tutela</span>
                                 <span class="transition-transform group-open:rotate-180">
                                     <svg fill="none" height="24" shape-rendering="geometricPrecision"
                                         stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -96,19 +182,22 @@
                                     </svg>
                                 </span>
                             </summary>
-                            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                                Explore the different ways you can participate in our programs, including surveys,
-                                feedback, and
-                                events.
+                            <p class="text-neutral-900 mt-3 group-open:animate-fadeIn">
+                                Mecanismo a través del cual toda persona puede reclamar ante los jueces la protección
+                                inmediata de sus derechos
+                                fundamentales, cuando éstos son vulnerados o amenazados por la acción o la omisión de
+                                cualquier autoridad o de los
+                                particulares en los casos establecidos en la ley.
                             </p>
                         </details>
                     </div>
 
-                    <div class="mt-3 max-w-[calc(100%-40px)] ml-8">
+
+                    <div class="mt-3 max-w-[calc(100%-50px)] ml-8">
                         <details class="group" id="submenu">
                             <summary
-                                class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#C04120] text-white group-open:bg-[#404D40]">
-                                <span>Submenú: Opciones de Participación</span>
+                                class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#404D40] text-white group-open:bg-[#C04120]">
+                                <span>Denuncias</span>
                                 <span class="transition-transform group-open:rotate-180">
                                     <svg fill="none" height="24" shape-rendering="geometricPrecision"
                                         stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -117,19 +206,21 @@
                                     </svg>
                                 </span>
                             </summary>
-                            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                                Explore the different ways you can participate in our programs, including surveys,
-                                feedback, and
-                                events.
+                            <p class="text-neutral-900 mt-3 group-open:animate-fadeIn">
+                                De acuerdo con lo establecido en la Ley 906 de 2004, toda persona debe denunciar a la
+                                autoridad los delitos de cuya
+                                comisión tenga conocimiento y que deban investigarse de oficio, este proceso se puede
+                                denunciar de forma verbal, escrita
+                                o por cualquier medio permitido que lleve a la identificación del autor.
                             </p>
                         </details>
                     </div>
 
-                    <div class="mt-3 max-w-[calc(100%-40px)] ml-8">
+                    <div class="mt-3 max-w-[calc(100%-50px)] ml-8">
                         <details class="group" id="submenu">
                             <summary
-                                class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#C04120] text-white group-open:bg-[#404D40]">
-                                <span>Submenú: Opciones de Participación</span>
+                                class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#404D40] text-white group-open:bg-[#C04120]">
+                                <span>Derechos de petición</span>
                                 <span class="transition-transform group-open:rotate-180">
                                     <svg fill="none" height="24" shape-rendering="geometricPrecision"
                                         stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -138,21 +229,23 @@
                                     </svg>
                                 </span>
                             </summary>
-                            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                                Explore the different ways you can participate in our programs, including surveys,
-                                feedback, and
-                                events.
+                            <p class="text-neutral-900 mt-3 group-open:animate-fadeIn">
+                                Es aquel derecho que tiene toda persona a presentar peticiones respetuosas a las
+                                autoridades, en los términos señalados,
+                                por motivo de interés general o particular, y a obtener pronta resolución completa y de
+                                fondo sobre la misma.
                             </p>
                         </details>
                     </div>
+
                 </details>
             </div>
 
             <div class="py-3">
                 <details class="group">
                     <summary
-                        class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#C04120] text-white group-open:bg-[#404D40]">
-                        <span>Descripción</span>
+                        class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#404D40] text-white group-open:bg-[#C04120]">
+                        <span>ESTRATEGIAS DE PARTICIPACIÓN CIUDADANA</span>
                         <span class="transition-transform group-open:rotate-180">
                             <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
                                 stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"
@@ -162,12 +255,150 @@
                         </span>
                     </summary>
                     <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                        SAAS platform is a cloud-based software service that allows users to access and use a variety of
+                        SAAS platform is a cloud-based software service that allows users to access and use a
+                        variety of
                         tools and functionality.
                     </p>
                 </details>
             </div>
-            <!-- Otros detalles aquí... -->
+
+            <div class="py-3">
+                <details class="group">
+                    <summary
+                        class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#404D40] text-white group-open:bg-[#C04120]">
+                        <span>ESTRATEGIA ANUAL DE RENDICIÓN DE CUENTAS</span>
+                        </a>
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"
+                                width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                </details>
+            </div>
+
+            <div class="py-3">
+                <details class="group">
+                    <summary
+                        class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#404D40] text-white group-open:bg-[#C04120]">
+                        <span>PLAN ANTICORRUPCIÓN Y ATENCIÓN AL CIUDADANO (PAAC)</span>
+                        </a>
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"
+                                width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <ul class="max-w-md space text-black-500 list-disc list-inside mt-2 mb-2 mx-5 mt-5">
+                        <a href="https://www.nobsa-boyaca.gov.co/paac/paac-2024">
+                            <li>Plan Anticorrupción y Atenci&oacute;n al Ciudadano (PAAC) 2024</li>
+                        </a>
+
+                        <a href="https://www.nobsa-boyaca.gov.co/paac/paac-2024">
+                            <li>Plan Anticorrupción y Atenci&oacute;n al Ciudadano (PAAC) 2023</li>
+                        </a>
+                    </ul>
+
+                </details>
+            </div>
+
+            <div class="py-3">
+                <details class="group">
+                    <summary
+                        class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#404D40] text-white group-open:bg-[#C04120]">
+                        <a href="https://www.nobsa-boyaca.gov.co/tema/rendicion-de-cuentas"><span>INFORMES DE
+                                RENDICIÓN
+                                DE CUENTAS GENERALES</span></a>
+
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"
+                                width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                </details>
+            </div>
+
+            <div class="py-3">
+                <details class="group">
+                    <summary
+                        class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#404D40] text-white group-open:bg-[#C04120]">
+                        <span>CONVOCATORIAS PARA LA PARTICIPACIÓN DE LA CIUDADANÍA</span>
+                        </a>
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"
+                                width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                </details>
+            </div>
+
+            <div class="py-3">
+                <details class="group">
+                    <summary
+                        class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#404D40] text-white group-open:bg-[#C04120]">
+                        <span>CALENDARIO DE LA ESTRATEGIA ANUAL DE PARTICIPACIÓN CIUDADANA</span>
+                        </a>
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"
+                                width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                </details>
+            </div>
+
+
+            <div class="py-3">
+                <details class="group">
+                    <summary
+                        class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#404D40] text-white group-open:bg-[#C04120]">
+                        <span>FORMULARIO DE INSCRIPCIÓN CIUDADANA A PROCESOS DE PARTICIPACIÓN, INSTANCIAS O
+                            ACCIONES QUE
+                            OFRECE LA ENTIDAD</span>
+                        </a>
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"
+                                width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                </details>
+            </div>
+
+
+            <div class="py-3">
+                <details class="group">
+                    <summary
+                        class="flex justify-between items-center font-medium cursor-pointer list-none p-3 rounded-lg transition-bg bg-[#404D40] text-white group-open:bg-[#C04120]">
+                        <span>CANAL DE INTERACCIÓN DELIBERATORIA PARA LA PARTICIPACIÓN CIUDADANA.</span>
+                        </a>
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"
+                                width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                </details>
+            </div>
+            <div>
+
+            </div>
         </div>
 
         <!-- Sección de las imágenes -->
@@ -179,18 +410,20 @@
                             <div class="flex flex-col mr-3 text-center mb-5 lg:mr-6">
                                 <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
                                     <img class="inline-block shrink-0 rounded-[.95rem] w-[350px] h-[270px]"
-                                        src="https://www.boyaca.gov.co/wp-content/uploads/2022/06/WhatsApp-Image-2022-06-29-at-9.23.41-AM.jpeg"
-                                        alt="avatar image">
+                                        src="./Participación.png" alt="avatar image">
                                 </div>
                             </div>
 
                             <div class="flex flex-col mr-3 text-center mb-5 lg:mr-6">
                                 <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                                    <img class="inline-block shrink-0 rounded-[.95rem] w-[350px] h-[270px]"
-                                        src="https://www.boyaca.gov.co/wp-content/uploads/2022/06/WhatsApp-Image-2022-06-29-at-9.23.41-AM.jpeg"
-                                        alt="avatar image">
+                                    <a href="https://www.nobsa-boyaca.gov.co/tema/consulta-ciudadana">
+                                        <img class="inline-block shrink-0 rounded-[.95rem] w-[350px] h-[270px]"
+                                            src="https://www.boyaca.gov.co/wp-content/uploads/2022/06/WhatsApp-Image-2022-06-29-at-9.23.41-AM.jpeg"
+                                            alt="avatar image">
+                                    </a>
                                 </div>
                             </div>
+
 
                             <div class="flex flex-col mr-3 text-center mb-5 lg:mr-6">
                                 <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
@@ -209,22 +442,67 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+
             const accordion = document.getElementById('accordion');
             const detailsElements = accordion.querySelectorAll('details');
 
             detailsElements.forEach((details) => {
+                const summary = details.querySelector('summary'); // Obtener el summary asociado
+
+                // Set initial background color for submenus
+                if (details.closest('#submenu')) {
+                    summary.style.backgroundColor = '#A9A9A9'; // Lighter gray for submenus
+                } else {
+                    summary.style.backgroundColor = '#404D40'; // Initial color for main menu
+                }
+                summary.style.color = 'white';
+
                 details.addEventListener('toggle', () => {
                     if (details.open) {
+                        // Check if the details element is a submenu
+                        const isSubmenu = details.closest('#submenu') !== null;
+
+                        if (isSubmenu) {
+                            summary.style.backgroundColor = '#C85D40'; // Slightly lighter color for submenu when open
+                        } else {
+                            summary.style.backgroundColor = '#C04120'; // Main menu color when open
+                        }
+                        summary.style.color = 'white';
+
+                        // Close other details elements on the same level
                         detailsElements.forEach((otherDetails) => {
-                            if (otherDetails !== details) {
-                                otherDetails.open = false; // Close all other details
+                            if (details !== otherDetails) {
+                                const otherSummary = otherDetails.querySelector('summary');
+                                const otherIsSubmenu = otherDetails.closest('#submenu') !== null;
+
+                                if (isSubmenu === otherIsSubmenu) {
+                                    otherDetails.open = false;
+                                    if (otherSummary) {
+                                        if (otherIsSubmenu) {
+                                            otherSummary.style.backgroundColor = '#A9A9A9'; // Reset to lighter gray when closed
+                                        } else {
+                                            otherSummary.style.backgroundColor = '#404D40'; // Reset to initial main menu color
+                                        }
+                                        otherSummary.style.color = 'white';
+                                    }
+                                }
                             }
                         });
+                    } else {
+                        if (details.closest('#submenu')) {
+                            summary.style.backgroundColor = '#A9A9A9'; // Reset to lighter gray for submenus when closed
+                        } else {
+                            summary.style.backgroundColor = '#404D40'; // Reset to initial color for main menu when closed
+                        }
+                        summary.style.color = 'white';
                     }
                 });
             });
         });
     </script>
+
+
+
 </body>
 
 </html>
